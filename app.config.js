@@ -21,9 +21,11 @@ export default ({ config }) => ({
       }
     },
     ios: {
+      bundleIdentifier: "com.larrydaves.framez",
       supportsTablet: true
     },
     android: {
+      package: "com.larrydaves.framez",
       adaptiveIcon: {
         backgroundColor: "#E6F4FE",
         foregroundImage: "./assets/images/android-icon-foreground.png",
