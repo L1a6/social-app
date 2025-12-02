@@ -6,6 +6,9 @@ export default ({ config }) => ({
     // These are your environment variables for Supabase
     supabaseUrl: process.env.SUPABASE_URL,
     supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
+    eas: {
+      projectId: process.env.EAS_PROJECT_ID || "your-project-id"
+    }
   },
   expo: {
     ...config.expo,

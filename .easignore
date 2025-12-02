@@ -1,0 +1,61 @@
+# EAS Build Ignore - Files/folders to exclude from build uploads
+# This significantly reduces upload time and prevents timeouts
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+README.md
+CHANGELOG.md
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Tests
+__tests__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Development files
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# Cache
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env (keep .env.example)
+.env
+.env*.local
+
+# Scripts not needed for build
+scripts/
+
+# Example files
+*-example
+app-example/
