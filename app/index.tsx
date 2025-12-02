@@ -1,24 +1,24 @@
 // app/index.tsx
+import { BlurView } from 'expo-blur';
+import LinearGradient from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
 import React, { useEffect, useRef } from 'react';
 import {
-  View,
-  Text,
-  TouchableOpacity,
   Animated,
   Dimensions,
+  Image,
   StatusBar,
   StyleSheet,
-  Image,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import LinearGradient  from 'expo-linear-gradient';
-import { BlurView } from 'expo-blur';
-import { useRouter } from 'expo-router';
 
 const { width, height } = Dimensions.get('window');
 
 // Import your professional logo here
-import LogoImg from '../assets/images/logo.png'; // replace with your actual logo
 import BackgroundImg from '../assets/images/background.png'; // optional background
+import LogoImg from '../assets/images/logo.png'; // replace with your actual logo
 
 export default function WelcomeScreen() {
   const router = useRouter();
@@ -179,7 +179,7 @@ export default function WelcomeScreen() {
           <TouchableOpacity
             activeOpacity={0.8}
             style={styles.buttonContainer}
-            onPress={() => router.push('/auth/login')}
+            onPress={() => router.push('../auth/login')}
           >
             <BlurView intensity={50} tint="light" style={styles.buttonBlur}>
               <LinearGradient
@@ -197,7 +197,7 @@ export default function WelcomeScreen() {
           <Text style={styles.signInText}>Already have an account? </Text>
           <TouchableOpacity
             activeOpacity={0.7}
-            onPress={() => router.push('/auth/login')}
+            onPress={() => router.push('../auth/login')}
           >
             <Text style={styles.signInLink}>Sign In</Text>
           </TouchableOpacity>
