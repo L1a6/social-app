@@ -2,14 +2,6 @@ import 'dotenv/config';
 
 export default ({ config }) => ({
   ...config,
-  extra: {
-    // These are your environment variables for Supabase
-    supabaseUrl: process.env.SUPABASE_URL,
-    supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
-    eas: {
-      projectId: "b4b289ea-b213-42e2-a999-b0ea74c13ed0"
-    }
-  },
   expo: {
     ...config.expo,
     name: "framez",
@@ -20,6 +12,14 @@ export default ({ config }) => ({
     scheme: "framez",
     userInterfaceStyle: "automatic",
     newArchEnabled: true,
+    extra: {
+      // These are your environment variables for Supabase
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
+      eas: {
+        projectId: "b4b289ea-b213-42e2-a999-b0ea74c13ed0"
+      }
+    },
     ios: {
       supportsTablet: true
     },
