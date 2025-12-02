@@ -7,7 +7,7 @@ export default ({ config }) => ({
     supabaseUrl: process.env.SUPABASE_URL,
     supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
     eas: {
-      projectId: process.env.EAS_PROJECT_ID || "your-project-id"
+      projectId: "b4b289ea-b213-42e2-a999-b0ea74c13ed0"
     }
   },
   expo: {
