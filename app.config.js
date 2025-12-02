@@ -32,11 +32,10 @@ export default ({ config }) => ({
       output: "static"
     },
     plugins: [
-    plugins: [
       "expo-router",
-      "expo-font",
-      "expo-splash-screen"
-    ],periments: {
+      "expo-font"
+    ],
+    experiments: {
       typedRoutes: true,
       reactCompiler: true
     }
