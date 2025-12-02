@@ -4,21 +4,16 @@ import LinearGradient from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useRef } from 'react';
 import {
-  Animated,
-  Dimensions,
-  Image,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    Animated,
+    Dimensions,
+    StatusBar,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View
 } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
-
-// Import your professional logo here
-import BackgroundImg from '../assets/images/background.png'; // optional background
-import LogoImg from '../assets/images/logo.png'; // replace with your actual logo
 
 export default function WelcomeScreen() {
   const router = useRouter();
@@ -103,14 +98,7 @@ export default function WelcomeScreen() {
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
 
-      {/* Optional Background Image */}
-      <Image
-        source={BackgroundImg}
-        style={StyleSheet.absoluteFillObject}
-        resizeMode="cover"
-      />
-
-  
+      {/* Gradient Background */}
       <LinearGradient
         colors={['#667eea', '#764ba2', '#f093fb']}
         start={{ x: 0, y: 0 }}
@@ -155,11 +143,7 @@ export default function WelcomeScreen() {
         <View style={styles.logoContainer}>
           <View style={styles.logoGlow} />
           <View style={styles.logo}>
-            <Image
-              source={LogoImg}
-              style={{ width: 80, height: 80, borderRadius: 20 }}
-              resizeMode="contain"
-            />
+            <Text style={styles.logoText}>F</Text>
           </View>
         </View>
 
@@ -278,6 +262,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 40,
     elevation: 20,
+  },
+  logoText: {
+    fontSize: 48,
+    fontWeight: '900',
+    color: '#667eea',
   },
   appName: {
     fontSize: 64,
