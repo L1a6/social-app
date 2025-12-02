@@ -16,7 +16,6 @@
       "ios": {
         "simulator": true
       },
-      "channel": "preview",
       "cache": {
         "disabled": false
       },
@@ -25,7 +24,6 @@
       }
     },
     "production": {
-      "channel": "production",
       "cache": {
         "disabled": false
       }
